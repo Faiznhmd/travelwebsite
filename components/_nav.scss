@@ -1,0 +1,77 @@
+@import "./variables";
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  z-index: $--z-fixed;
+
+  .nav {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav__logo {
+      color: $--title-color;
+      font-weight: $--font-semi-bold;
+    }
+    .nav__menu {
+      @media (max-width: 1023px) {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: hsla(0, 0%, 0%, 0.3);
+        width: 100%;
+        padding-block: 4rem;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition: top 0.4s;
+      }
+      .nav__list {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+
+        .nav__title {
+          .nav__link {
+            color: $--title-color;
+            font-weight: $--font-medium;
+          }
+        }
+      }
+      .nav__close {
+        display: flex;
+        font-size: 1.25rem;
+        color: $--title-color;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+    }
+    .nav__toggle {
+      display: flex;
+      font-size: 1.25rem;
+      color: $--title-color;
+      cursor: pointer;
+    }
+  }
+}
+.show-menu {
+  right: 0 !important;
+}
+
+.blur-header::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

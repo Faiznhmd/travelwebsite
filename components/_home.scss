@@ -1,0 +1,100 @@
+@import "./variables";
+.home {
+  position: relative;
+  .home__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .home__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0) 58%,
+      hsl(0, 0%, 0%) 78%
+    );
+  }
+  .home__container {
+    position: relative;
+    padding-top: 3rem;
+    row-gap: 3rem;
+    .home__data {
+      text-align: center;
+    }
+    .home__subtitle {
+      font-size: $--h3-font-size;
+      margin-bottom: 0.5rem;
+    }
+    .home__title {
+      font-size: $--biggest-font-size;
+      margin-bottom: 1rem;
+    }
+    .home__description {
+      margin-bottom: 2rem;
+      color: $--title-color;
+    }
+    .button {
+      background-color: hsla(0, 0%, 100%, 0.2);
+      padding: 1.25rem 1.5rem;
+      color: $--title-color;
+      display: inline-flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      font-weight: $--font-semi-bold;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      i {
+        font-size: 1.25rem;
+        transition: transform 0.4s;
+        font-weight: initial;
+      }
+      &:hover i {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+  .home__cards {
+    grid-template-columns: 240px;
+    justify-content: center;
+
+    .home_card {
+      position: relative;
+      overflow: hidden;
+      img {
+        transition: transfrom 0.4s;
+      }
+      .home__card-img {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .home__card-title {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        font-size: $--h3-font-size;
+        z-index: 1;
+      }
+    }
+    .home__card-shadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        hsla(0, 0%, 0%, 0) 50%,
+        hsl(0, 0%, 0%) 125%
+      );
+    }
+  }
+}

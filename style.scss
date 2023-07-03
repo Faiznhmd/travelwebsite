@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;1,300&display=swap");
+@import "./components/variables";
+@import "./components/nav";
+@import "./components/home";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: "Poppins", sans-serif;
+  font-size: $--normal-font-size;
+  color: $--text-color;
+}
+
+body {
+  background-color: $--body-color;
+  font-family: "Poppins", sans-serif;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $--title-color;
+  font-family: "Poppins", sans-serif;
+  font-weight: $--font-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: $--h1-font-size;
+  margin-bottom: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}

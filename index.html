@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css"
+      integrity="sha512-Jp3oCtkKo8j/WRrHq2jrYMtJogclQybtR6+81arCLTO/TvWj3oaF4NkZQs2bTqWJ8An8L2MLKKfvsn3H8vZP1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Travel</a>
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__title">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__title">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__title">
+              <a href="#popular" class="nav__link">Popular</a>
+            </li>
+            <li class="nav__title">
+              <a href="#explore" class="nav__link">Explore</a>
+            </li>
+          </ul>
+          <!-- close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+          <!-- toggle button -->
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main class="main">
+      <section class="home section" id="home">
+        <img src="./img/home-bg.jpg" alt="" class="home__bg" />
+        <div class="home__shadow"></div>
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h3 class="home__subtitle">Welcome To Travel</h3>
+            <h1 class="home__title">
+              Explore <br />
+              The world
+            </h1>
+            <p class="home__description">
+              Live the trips the world discover paradise islands mountains and
+              much more get your trip now.
+            </p>
+            <a href="#" class="button"
+              >Start the journey <i class="ri-arrow-right-line"></i
+            ></a>
+          </div>
+          <div class="home__cards grid">
+            <article class="home_card">
+              <img src="./img/home-beach.jpg" alt="" class="home__card-img" />
+              <h3 class="home__card-title">Beach</h3>
+              <div class="home__card-shadow"></div>
+            </article>
+            <article class="home_card">
+              <img src="./img/home-lake.jpg" alt="" class="home__card-img" />
+              <h3 class="home__card-title">Iceland</h3>
+              <div class="home__card-shadow"></div>
+            </article>
+            <article class="home_card">
+              <img
+                src="./img/home-mountain.jpg"
+                alt=""
+                class="home__card-img"
+              />
+              <h3 class="home__card-title">Mountains</h3>
+              <div class="home__card-shadow"></div>
+            </article>
+            <article class="home_card">
+              <img src="./img/home-beach.jpg" alt="" class="home__card-img" />
+              <h3 class="home__card-title">Spain</h3>
+              <div class="home__card-shadow"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
