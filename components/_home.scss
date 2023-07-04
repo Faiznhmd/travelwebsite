@@ -68,14 +68,13 @@
     .home_card {
       position: relative;
       overflow: hidden;
+      &:hover .home__card-img {
+        transform: scale(1.2);
+      }
       img {
         transition: transfrom 0.4s;
       }
-      .home__card-img {
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
+
       .home__card-title {
         position: absolute;
         left: 1rem;
