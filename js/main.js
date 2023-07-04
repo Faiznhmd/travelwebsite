@@ -2,8 +2,6 @@ const navClose = document.getElementById("nav-close");
 const navToggle = document.getElementById("nav-toggle");
 const navMenu = document.getElementById("nav__menu");
 
-console.log(navMenu);
-
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
@@ -32,3 +30,19 @@ const blurHeader = () => {
     : header.classList.remove("blur-header");
 };
 window.addEventListener("scroll", blurHeader);
+
+// Scroll reveal animation
+// window.sr = ScrollReveal({
+//   origin: "top",
+//   distance: "80px",
+//   duration: 2000,
+//   reset: true,
+// });
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "80px",
+  duration: 2000,
+  reset: true,
+});
+
+sr.reveal(".home__data", {});

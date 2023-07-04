@@ -10,6 +10,12 @@
         height: 333px;
         object-fit: cover;
         object-position: center;
+        @media (min-width: 768px) {
+          width: 100vw;
+        }
+        @media (min-width: 1152px) {
+          height: 600px;
+        }
       }
       .explore__shadow {
         position: absolute;
@@ -31,11 +37,35 @@
       text-align: center;
       padding-top: 16rem;
       row-gap: 2.5rem;
+      @media (min-width: 576px) {
+        grid-template-columns: 380px;
+        justify-content: center;
+      }
+      @media (min-width: 1152px) {
+        padding-top: 28rem;
+        grid-template-columns: 670px 1fr;
+      }
+      .explore__data {
+        @media (min-width: 1152px) {
+          text-align: initial;
+        }
+        .section__title {
+          @media (min-width: 1152px) {
+            text-align: initial;
+            font-size: 3rem;
+          }
+        }
+      }
       .explore__user {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         column-gap: 0.5rem;
+        @media (min-width: 1152px) {
+          justify-content: flex-end;
+          align-self: flex-end;
+          margin-bottom: 1.25rem;
+        }
         .explore__prefil {
           width: 30px;
           border-radius: 50%;

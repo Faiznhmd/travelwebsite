@@ -3,12 +3,35 @@
 .join__container {
   row-gap: 3rem !important;
   padding-bottom: 2.5rem;
-
+  @media (min-width: 576px) {
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 350px);
+    align-items: center;
+  }
+  @media (min-width: 1152px) {
+    grid-template-columns: 460px 340px;
+    column-gap: 8.5rem !important;
+    padding-block: 1rem 5rem;
+  }
   .join__data {
     text-align: center;
+    @media (min-width: 768px) {
+      text-align: initial;
+    }
+    .section__title {
+      @media (min-width: 768px) {
+        text-align: initial;
+      }
+    }
 
     .join__description {
       margin-bottom: 2rem;
+      @media (min-width: 1152px) {
+        margin-bottom: 3rem;
+      }
     }
 
     .join__form {
@@ -50,7 +73,9 @@
     position: relative;
     justify-self: center;
     overflow: hidden;
-    // transition: all 0.3s ease-in-out;
+    @media (min-width: 768px) {
+      order: -1;
+    }
 
     &:hover {
       .join__img {
@@ -61,6 +86,9 @@
     .join__img {
       transition: transform 0.4s;
       width: 300px;
+      @media (min-width: 1152px) {
+        width: 460px;
+      }
     }
 
     .join__shadow {

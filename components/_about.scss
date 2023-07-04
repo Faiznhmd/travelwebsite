@@ -1,12 +1,34 @@
 @import "./variables";
 .about__container {
   row-gap: 3rem;
+  @media (min-width: 576px) {
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 350px);
+    align-items: center;
+  }
+  @media (min-width: 1152px) {
+    grid-template-columns: 400px 460px;
+    column-gap: 8.5rem;
+    padding-block: 1rem;
+  }
   .about__data {
     text-align: center;
+    @media (min-width: 768px) {
+      text-align: initial;
+    }
     .section__title {
+      @media (min-width: 768px) {
+        text-align: initial;
+      }
     }
     .about__description {
       margin-bottom: 2rem;
+      @media (min-width: 1152px) {
+        margin-bottom: 3rem;
+      }
     }
     .button {
       background-color: hsla(0, 0%, 100%, 0.2);
@@ -32,12 +54,17 @@
     position: relative;
     justify-self: center;
     overflow: hidden;
-    &:hover .about__img {
-      transform: scale(1.2);
+    &:hover {
+      .about__img {
+        transform: scale(1.2);
+      }
     }
     .about__img {
       width: 300px;
       transition: transform 0.4s;
+      @media (min-width: 1152px) {
+        width: 460px;
+      }
     }
     .about__shadow {
       position: absolute;

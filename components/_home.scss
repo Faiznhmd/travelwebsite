@@ -21,17 +21,37 @@
       hsla(0, 0%, 0%, 0) 58%,
       hsl(0, 0%, 0%) 78%
     );
+    @media (min-width: 1152px) {
+      height: 980px;
+    }
   }
   .home__container {
     position: relative;
     padding-top: 3rem;
     row-gap: 3rem;
+    @media (min-width: 576px) {
+      grid-template-columns: 380px;
+      justify-content: center;
+    }
+    @media (min-width: 1152px) {
+      grid-template-columns: initial;
+      justify-content: initial;
+      row-gap: 4rem;
+      padding-top: 6.5rem;
+    }
     .home__data {
       text-align: center;
+      @media (min-width: 1152px) {
+        text-align: initial;
+        width: 480px;
+      }
     }
     .home__subtitle {
       font-size: $--h3-font-size;
       margin-bottom: 0.5rem;
+      @media (min-width: 1152px) {
+        font-size: $--h2-font-size;
+      }
     }
     .home__title {
       font-size: $--biggest-font-size;
@@ -40,6 +60,9 @@
     .home__description {
       margin-bottom: 2rem;
       color: $--title-color;
+      @media (min-width: 1152px) {
+        margin-bottom: 2.5rem;
+      }
     }
     .button {
       background-color: hsla(0, 0%, 100%, 0.2);
@@ -59,28 +82,45 @@
       &:hover i {
         transform: translateX(0.25rem);
       }
+      @media (min-width: 1152px) {
+        column-gap: 1.5rem;
+      }
     }
   }
   .home__cards {
     grid-template-columns: 240px;
     justify-content: center;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 240px);
+    }
+
+    @media (min-width: 1152px) {
+      grid-template-columns: repeat(4, 260px);
+    }
 
     .home_card {
       position: relative;
       overflow: hidden;
       &:hover {
         .home__card-img {
-          transform: scale (1.2);
-          transition: transfrom 0.4s;
+          transform: scale(1.2);
         }
+      }
+      .home__card-img {
+        transition: transform 0.4s;
       }
 
       .home__card-title {
         position: absolute;
         left: 1rem;
         bottom: 1rem;
+        transition: transform 0.4s;
         font-size: $--h3-font-size;
         z-index: 1;
+        @media (min-width: 1152px) {
+          left: 1.5rem;
+          bottom: 1.5rem;
+        }
       }
     }
     .home__card-shadow {

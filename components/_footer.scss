@@ -1,10 +1,17 @@
 @import "./variables";
 .footer {
   padding-block: 2.5rem;
+  @media (min-width: 1152px) {
+    padding-block: 5rem 3rem;
+  }
 
   background-color: $--container-color;
   .footer__content {
     row-gap: 3.5rem;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: space-between;
+    }
 
     .footer__logo {
       display: inline-block;
@@ -15,11 +22,26 @@
     }
     .footer__data {
       grid-template-columns: repeat(2, max-content);
-      gap: 2.5rem 3.5rem;
-      .foooter__title {
+      @media (max-width: 340px) {
+        grid-template-columns: max-content;
+      }
+      @media (min-width: 576px) {
+        grid-template-columns: repeat(3, max-content);
+      }
+      @media (min-width: 1023px) {
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 4.5rem;
+        // gap: 2.5rem 3.5rem;
+      }
+
+      .footer__title {
         font-size: $--h3-font-size;
         margin-bottom: 1rem;
+        @media (min-width: 1152px) {
+          margin-bottom: 1.5rem;
+        }
       }
+
       .footer__links {
         display: grid;
         row-gap: 0.75rem;
@@ -39,9 +61,19 @@
     flex-direction: column;
     align-items: center;
     row-gap: 2rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media (min-width: 1152px) {
+      margin-top: 7rem;
+    }
     .footer__social {
       display: flex;
       column-gap: 1.5rem;
+      @media (min-width: 1152px) {
+        column-gap: 2rem;
+      }
       .footer__social-link {
         color: $--text-color;
         font-size: 1.25rem;
@@ -50,6 +82,9 @@
           color: $--title-color;
           transform: translateY(-0.75rem);
         }
+        @media (min-width: 1152px) {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -57,6 +92,9 @@
     font-size: $--smaller-font-size;
     color: $--text-color-light;
     text-align: center;
+    @media (min-width: 768px) {
+      order: -1;
+    }
   }
 }
 .scrollup {
@@ -74,6 +112,9 @@
   transition: bottom 0.4s;
   &:hover {
     transform: translatey(-0.45rem);
+  }
+  @media (min-width: 1152px) {
+    right: 3rem;
   }
 }
 .show-scroll {

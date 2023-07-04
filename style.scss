@@ -63,6 +63,13 @@ img {
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
+
+  @media (max-width: 340px) {
+    margin-inline: 1rem;
+  }
+  @media (min-width: 1152px) {
+    margin-inline: auto;
+  }
 }
 
 .grid {
@@ -72,6 +79,9 @@ img {
 
 .section {
   padding-block: 5rem 1rem;
+  @media (min-width: 1152px) {
+    padding-block: 7rem 2rem;
+  }
 }
 
 .section__title {
