@@ -6,6 +6,7 @@
 @import "./components/popular";
 @import "./components/explore";
 @import "./components/join";
+@import "./components/footer";
 
 * {
   box-sizing: border-box;
@@ -81,4 +82,16 @@ img {
 
 .main {
   overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 10%);
+}
+::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  background-color: hsl(0, 0%, 10%);
+  &:hover {
+    background-color: hsl(0, 0%, 30%);
+  }
 }
