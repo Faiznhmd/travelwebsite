@@ -301,6 +301,65 @@
   color: hsl(0, 0%, 95%);
 }
 
+.join__container {
+  row-gap: 3rem !important;
+  padding-bottom: 2.5rem;
+}
+.join__container .join__data {
+  text-align: center;
+}
+.join__container .join__data .join__description {
+  margin-bottom: 2rem;
+}
+.join__container .join__data .join__form {
+  display: grid;
+  row-gap: 1rem;
+}
+.join__container .join__data .join__form .join__input {
+  padding: 1.25rem 1rem;
+  background-color: hsl(0, 0%, 8%);
+}
+.join__container .join__data .join__form .button {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  padding: 1.25rem 1.5rem;
+  color: hsl(0, 0%, 95%);
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  font-weight: 600;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+.join__container .join__data .join__form .button i {
+  font-size: 1.25rem;
+  transition: transform 0.4s;
+  font-weight: initial;
+}
+.join__container .join__data .join__form .button:hover i {
+  transform: translateX(0.25rem);
+}
+.join__container .join__image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+.join__container .join__image:hover .join__img {
+  transform: scale(1.2);
+}
+.join__container .join__image .join__img {
+  transition: transform 0.4s;
+  width: 300px;
+}
+.join__container .join__image .join__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
