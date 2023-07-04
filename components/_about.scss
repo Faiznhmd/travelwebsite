@@ -1,0 +1,55 @@
+@import "./variables";
+.about__container {
+  row-gap: 3rem;
+  .about__data {
+    text-align: center;
+    .section__title {
+    }
+    .about__description {
+      margin-bottom: 2rem;
+    }
+    .button {
+      background-color: hsla(0, 0%, 100%, 0.2);
+      padding: 1.25rem 1.5rem;
+      color: $--title-color;
+      display: inline-flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      font-weight: $--font-semi-bold;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      i {
+        font-size: 1.25rem;
+        transition: transform 0.4s;
+        font-weight: initial;
+      }
+      &:hover i {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+  .about__image {
+    position: relative;
+    justify-self: center;
+    overflow: hidden;
+    &:hover .about__img {
+      transform: scale(1.2);
+    }
+    .about__img {
+      width: 300px;
+      transition: transform 0.4s;
+    }
+    .about__shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        hsla(0, 0%, 0%, 0) 50%,
+        hsl(0, 0%, 0%) 125%
+      );
+    }
+  }
+}

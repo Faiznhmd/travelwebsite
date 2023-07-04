@@ -143,11 +143,11 @@
   position: relative;
   overflow: hidden;
 }
+.home .home__cards .home_card:hover .home__card-img {
+  transform: scale(1.2);
+}
 .home .home__cards .home_card img {
   transition: transfrom 0.4s;
-}
-.home .home__cards .home_card .home__card-img:hover {
-  transform: scale(1.2);
 }
 .home .home__cards .home_card .home__card-title {
   position: absolute;
@@ -162,6 +162,56 @@
   height: 100%;
   top: 0;
   left: 0;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
+
+.about__container {
+  row-gap: 3rem;
+}
+.about__container .about__data {
+  text-align: center;
+}
+.about__container .about__data .about__description {
+  margin-bottom: 2rem;
+}
+.about__container .about__data .button {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  padding: 1.25rem 1.5rem;
+  color: hsl(0, 0%, 95%);
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  font-weight: 600;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+.about__container .about__data .button i {
+  font-size: 1.25rem;
+  transition: transform 0.4s;
+  font-weight: initial;
+}
+.about__container .about__data .button:hover i {
+  transform: translateX(0.25rem);
+}
+.about__container .about__image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+.about__container .about__image:hover .about__img {
+  transform: scale(1.2);
+}
+.about__container .about__image .about__img {
+  width: 300px;
+  transition: transform 0.4s;
+}
+.about__container .about__image .about__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
 }
 
