@@ -256,6 +256,51 @@
   font-size: 1rem;
 }
 
+.explore {
+  position: relative;
+}
+.explore .explore__container .explore__image {
+  position: absolute;
+  overflow: hidden;
+}
+.explore .explore__container .explore__image .explore__img {
+  width: 100%;
+  height: 333px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.explore .explore__container .explore__image .explore__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(180deg, hsl(0, 0%, 0%) 5%, hsla(0, 0%, 0%, 0) 40%, hsla(0, 0%, 0%, 0) 60%, hsl(0, 0%, 0%) 92%);
+}
+.explore .explore__container .explore__content {
+  position: relative;
+  text-align: center;
+  padding-top: 16rem;
+  row-gap: 2.5rem;
+}
+.explore .explore__container .explore__content .explore__user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.explore .explore__container .explore__content .explore__user .explore__prefil {
+  width: 30px;
+  border-radius: 50%;
+}
+.explore .explore__container .explore__content .explore__user .explore__name {
+  font-size: 0.865rem;
+  color: hsl(0, 0%, 95%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
