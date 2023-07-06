@@ -40,9 +40,17 @@ window.addEventListener("scroll", blurHeader);
 // });
 const sr = ScrollReveal({
   origin: "top",
-  distance: "80px",
+  distance: "60px",
   duration: 2000,
   reset: true,
 });
 
 sr.reveal(".home__data", {});
+
+// const sr = ScrollReveal({
+//   origin: "top",
+//   distance: "60px",
+//   duration: 2000,
+//   reset: true,
+// });
+// sr.reveal(".home__card", {});
