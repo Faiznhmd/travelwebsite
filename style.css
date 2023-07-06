@@ -568,17 +568,18 @@
   justify-self: center;
   overflow: hidden;
 }
+.join__container .join__image:hover .join__img {
+  transform: scale(1.2);
+}
 @media (min-width: 768px) {
   .join__container .join__image {
     order: -1;
   }
 }
-.join__container .join__image:hover .join__img {
-  transform: scale 1.2;
-}
 .join__container .join__image .join__img {
   transition: transform 0.4s;
   width: 300px;
+  transform: scale 1.2;
 }
 @media (min-width: 1152px) {
   .join__container .join__image .join__img {

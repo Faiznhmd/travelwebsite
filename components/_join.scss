@@ -39,7 +39,6 @@
       row-gap: 1rem;
 
       .join__input {
-        // text-align: center;
         padding: 1.25rem 1rem;
         background-color: hsl(0, 0%, 8%);
       }
@@ -73,19 +72,19 @@
     position: relative;
     justify-self: center;
     overflow: hidden;
-    @media (min-width: 768px) {
-      order: -1;
-    }
-
     &:hover {
       .join__img {
-        transform: scale (1.2);
+        transform: scale(1.2);
       }
+    }
+    @media (min-width: 768px) {
+      order: -1;
     }
 
     .join__img {
       transition: transform 0.4s;
       width: 300px;
+      transform: scale (1.2);
       @media (min-width: 1152px) {
         width: 460px;
       }
