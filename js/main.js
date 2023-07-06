@@ -40,26 +40,35 @@ const scrollUp = () => {
 };
 window.addEventListener("scroll", scrollUp);
 
-// Scroll reveal animation
-// window.sr = ScrollReveal({
-//   origin: "top",
-//   distance: "80px",
-//   duration: 2000,
-//   reset: true,
-// });
+// scroll animation
+
 const sr = ScrollReveal({
   origin: "top",
   distance: "60px",
-  duration: 2000,
+  duration: 3000,
+  delay: 200,
   reset: true,
 });
 
-sr.reveal(".home__data", {});
+sr.reveal(
+  ".home__data, .explore__user, .footer__container, .explore__data, .section__title",
+  {}
+);
 
-// const sr = ScrollReveal({
-//   origin: "top",
-//   distance: "60px",
-//   duration: 2000,
-//   reset: true,
-// });
-// sr.reveal(".home__card", {});
+sr.reveal(".home_card", {
+  delay: 400,
+  distance: "100px",
+  interval: 100,
+});
+
+sr.reveal(".about__data, .join__image", {
+  origin: "right",
+});
+
+sr.reveal(".about__image, .join__data", {
+  origin: "left",
+});
+
+sr.reveal(".popular__card", {
+  interval: 200,
+});
