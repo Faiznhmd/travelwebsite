@@ -31,6 +31,15 @@ const blurHeader = () => {
 };
 window.addEventListener("scroll", blurHeader);
 
+// scroll up
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.add("show-scroll");
+};
+window.addEventListener("scroll", scrollUp);
+
 // Scroll reveal animation
 // window.sr = ScrollReveal({
 //   origin: "top",
